@@ -1,20 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Header from './components/Header';
-import App from './components/App';
-import Footer from './components/Footer';
+import { Router, Route, Link } from 'react-router';
+import './css/index.css';
+import routes from './routes';
 
-class Index extends React.Component {
-  render() {
-    return (
-      <div className="container text-center">
-        <Header />
-        <App />
-        <Footer />
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<Index />, document.getElementById('root'));
+ReactDOM.render(<Router>{routes}</Router>, document.getElementById('app'));
