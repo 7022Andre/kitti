@@ -1,0 +1,21 @@
+.Landing-main {
+  background-color: #AC4A83;
+  height: 23rem;
+  padding: 1rem;
+  color: #FCEFF6;
+}
+
+.Landing-logo {
+  animation: Landing-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+@keyframes Landing-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.Landing-intro {
+  margin-top: 2rem;
+  font-size: large;
+}
