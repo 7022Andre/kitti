@@ -1,16 +1,18 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router';
-import SetTimer from './components/setTimer';
+import { Route } from 'react-router-dom';
+
+import Header from './components/common/header';
+import Footer from './components/common/footer';
 import LandingPage from './components/landingPage';
-import App from './components/app';
+import SetTimer from './components/setTimer';
 
 const routes = (
-  <Route path="/" component={App}>
-    <Switch>
-      <Route path="landingPage" component={LandingPage} />
-      <Route path="setTimer" component={SetTimer} />
-    </Switch>
-  </Route>
+  <div className="container text-center">
+    <Header />
+    <Route exact path="/" component={ LandingPage } />
+    <Route path="/setTimer" component={ SetTimer } />
+    <Footer />
+  </div>
 );
 
 export default routes;

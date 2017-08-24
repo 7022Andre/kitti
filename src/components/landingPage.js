@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import '../css/landingPage.css';
 
-class LandingPage extends Component {
+export default class LandingPage extends Component {
   render() {
     return (
       <div className="Landing">
@@ -16,11 +17,9 @@ class LandingPage extends Component {
           <h3>Why? Why? Why?</h3>
           <br />
           <p>Help your child understand and visualize time by setting goals.</p>
-          <a href="#"><button className="btn btn-success">Get Started</button></a>
+          <Link to="/setTimer"><button className="btn btn-success">Get Started</button></Link>
         </div>
       </div>
     );
   }
 }
-
-export default LandingPage;

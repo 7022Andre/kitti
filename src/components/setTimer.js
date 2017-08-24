@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SetTimer extends Component {
+export default class SetTimer extends Component {
   render() {
     return (
       <div>
@@ -9,5 +9,3 @@ class SetTimer extends Component {
     );
   }
 }
-
-export default SetTimer;

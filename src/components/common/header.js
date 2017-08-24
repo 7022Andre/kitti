@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/header.css';
 
-class Header extends Component {
+export default class Header extends Component {
   render() {
     return (
       <div className="Header">
         <ul className="nav nav-tabs">
-          <li><a href="">Home</a></li>
+          <li><Link to="/">Home</Link></li>
           <li><a href="#">About</a></li>
           <li className="pull-right"><a href="#">Sign in | Login</a></li>
         </ul>
@@ -14,5 +15,3 @@ class Header extends Component {
     );
   }
 }
-
-export default Header;
