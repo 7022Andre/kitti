@@ -9,7 +9,7 @@ export default class Header extends Component {
         <ul className="nav nav-tabs">
           <li><Link to="/">Home</Link></li>
           <li><a href="#">About</a></li>
-          <li className="pull-right"><a href="#">Sign in | Login</a></li>
+          <li className="pull-right"><a href="#">Sign up | Login</a></li>
         </ul>
       </div>
     );
