@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ProgressBar from 'react-bootstrap/lib/ProgressBar';
 import '../../css/progress.css';
 
-export default class Progress extends Component {
-  render(now) {
-    return (
-      <div className="Progress container">
-        <ProgressBar now={this.props.now} bsStyle="success" />
-      </div>
-    );
-  }
-}
+export default (props) => {
+  return (
+    <div className="Progress container">
+      <ProgressBar now={props.now} bsStyle="success" />
+    </div>
+  );
+};

@@ -8,8 +8,7 @@ import LandingPage from './components/landingPage';
 import SetTimer from './components/setTimer';
 import StartGoal from './components/startGoal';
 
-
-const routes = (
+export default (
   <div className="container text-center">
     <Header />
     <Route exact path="/" component={ LandingPage } />
@@ -18,5 +17,3 @@ const routes = (
     <Footer />
   </div>
 );
-
-export default routes;
