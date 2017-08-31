@@ -2,17 +2,17 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import LandingPage from './landingPage';
-import * as setTimerActions from '../actions/setTimerActions';
+import * as setKittiActions from '../actions/setKittiActions';
 
 function mapStateToProps(store, ownProps) {
   return {
-    storeTime: store['storeTime']['time']
+    store: store['store']
   };
 }
 
 function mapDispatchProps(dispatch) {
   return {
-    actions: bindActionCreators(setTimerActions, dispatch)
+    actions: bindActionCreators(setKittiActions, dispatch)
   };
 }
 

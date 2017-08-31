@@ -1,0 +1,6 @@
+.input-hours,
+.input-minutes,
+.input-seconds {
+  margin: 1.5rem;
+  display: inline-block;
+}

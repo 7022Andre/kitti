@@ -5,10 +5,10 @@ import { bindActionCreators } from 'redux';
 import Task from './common/task';
 import * as setKittiActions from '../actions/setKittiActions';
 
-class StartGoal extends Component {
+class MiddleGoals extends Component {
   handleChange = (display_src, caption) => {
-    this.props.actions.setStartGoal({
-      startGoal: {
+    this.props.actions.setFunGoal({
+      middleGoals: {
         ...this.props.store,
         caption,
         display_src,
@@ -18,8 +18,8 @@ class StartGoal extends Component {
   }
   render() {
     return (
-      <div className="StartGoal">
-        <h3>Please choose your goal</h3>
+      <div className="MiddleGoals">
+        <h3>Please choose your middle goals (up to 3).</h3>
 
         <Task handleChange={this.handleChange} store={this.props.store}/>
       </div>
@@ -29,7 +29,7 @@ class StartGoal extends Component {
 
 function mapStateToProps(store, ownProps) {
   return {
-    store: store['store']['startGoal']
+    store: store['store']['middleGoals']
   };
 }
 
@@ -39,4 +39,4 @@ function mapDispatchProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchProps)(StartGoal);
+export default connect(mapStateToProps, mapDispatchProps)(MiddleGoals);
