@@ -1,0 +1,23 @@
+.grid-figure {
+  margin: 0.5rem;
+  border: 1px solid lightgray;
+  background: white;
+  box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
+}
+
+.grid-figure.active {
+  border: 1.5px solid #AC4A83;
+}
+
+.grid-button {
+  border: none;
+}
+
+.grid-image {
+  opacity: .75;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}

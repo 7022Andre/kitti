@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import storeTime from './setTimerReducer';
+import store from './kittiReducer';
 
 const rootReducer = combineReducers({
-  storeTime
+  store
 });
 
 export default rootReducer;

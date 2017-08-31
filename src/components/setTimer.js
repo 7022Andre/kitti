@@ -4,33 +4,20 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import '../css/setTimer.css';
 import Progress from './common/progress';
-import * as setTimerActions from '../actions/setTimerActions';
+import * as setKittiActions from '../actions/setKittiActions';
 
 class SetTimer extends Component {
-  constructor(props, context) {
-    super(props, context);
-
-    this.state = {
-      time: {
-        hours: 0,
-        minutes: 0,
-        seconds: 0
-      }
-    };
-  }
-
   handleChange = (value, param) => {
-    this.setState({
+    this.props.actions.setTime({
       time: {
-        ...this.state.time,
+        ...this.props.store,
         [param]: value
-      },
+      }
     });
   }
 
-  onClickSave = () => this.props.actions.setTime(this.state.time)
-
   render() {
+    const { store } = this.props;
     const now = Math.round(100/6 * 1);
 
     function createOptionsArray(num) {
@@ -46,12 +33,12 @@ class SetTimer extends Component {
         <Progress now={now} />
 
         <h1>Time Limit</h1>
-        <h4>Please choose the time limit for the entire fun timer activity.</h4>
+        <h4>Please choose the time limit for the entire fun timer.</h4>
         <div className="input">
           <div className="input-hours">
             <h4>Hours</h4>
             <select
-              value={this.state.time.hours}
+              value={store.hours}
               onChange={(e) => this.handleChange(e.target.value, 'hours')}
               required >
                 {createOptionsArray(24).map(hour => <option key={hour} value={hour}>{hour}</option>)}
@@ -60,7 +47,7 @@ class SetTimer extends Component {
           <div className="input-minutes">
             <h4>Minutes</h4>
             <select
-              value={this.state.time.minutes}
+              value={store.minutes}
               onChange={(e) => this.handleChange(e.target.value, 'minutes')}
               required >
                 {createOptionsArray(60).map(minute => <option key={minute} value={minute}>{minute}</option>)}
@@ -69,19 +56,17 @@ class SetTimer extends Component {
           <div className="input-seconds">
             <h4>Seconds</h4>
             <select
-              value={this.state.time.seconds}
+              value={store.seconds}
               onChange={(e) => this.handleChange(e.target.value, 'seconds')}
               required >
                 {createOptionsArray(60).map(second => <option key={second} value={second}>{second}</option>)}
             </select>
           </div>
-          <h1>Store: {this.props.storeTime.hours}:{this.props.storeTime.minutes}:{this.props.storeTime.seconds}</h1>
-          <h1>Compo State: {this.state.time.hours}:{this.state.time.minutes}:{this.state.time.seconds}</h1>
         </div>
 
         <div className="buttons">
-          <Link to="/"><button className="back btn btn-warning" onClick={this.onClickSave}>Go back</button></Link>
-          <Link to="/startGoal"><button className="forward btn btn-success" onClick={this.onClickSave}>Next step</button></Link>
+          <Link to="/"><button className="back btn btn-warning">Go back</button></Link>
+          <Link to="/startGoal"><button className="forward btn btn-success">Next step</button></Link>
         </div>
       </div>
     );
@@ -90,13 +75,13 @@ class SetTimer extends Component {
 
 function mapStateToProps(store, ownProps) {
   return {
-    storeTime: store['storeTime']['time']
+    store: store['store']['time']
   };
 }
 
 function mapDispatchProps(dispatch) {
   return {
-    actions: bindActionCreators(setTimerActions, dispatch)
+    actions: bindActionCreators(setKittiActions, dispatch)
   };
 }
 
