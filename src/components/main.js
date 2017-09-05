@@ -13,6 +13,7 @@ class Main extends Component {
     const startGoal = this.props.store.startGoal;
     const funGoal = this.props.store.funGoal;
     const targetGoal = this.props.store.targetGoal;
+    const middleGoals = this.props.store.middleGoals;
     
     return (
       <div className="Main">
@@ -39,6 +40,7 @@ class Main extends Component {
                   <img className="grid-image"/>
                 </button>
               </Link>
+              
               <h4>2. Middle Goals</h4>
             </div>
             <div className="col-md-3">
@@ -80,4 +82,3 @@ function mapDispatchProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchProps)(Main);
-

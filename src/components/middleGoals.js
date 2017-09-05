@@ -25,7 +25,7 @@ class MiddleGoals extends Component {
 
     return (
       <div className="MiddleGoals">
-        <MiddleGoalTask handleChange={this.handleChange} store={this.props.store} id={"goal" + id} next={next} last={last}/>
+        <MiddleGoalTask handleChange={this.handleChange} store={this.props.store} id={id} next={next} last={last}/>
       </div>
     );
   }
