@@ -18,7 +18,7 @@ class Main extends Component {
       <div className="Main">
         <div className="container-fluid">
           <h1>Dashboard</h1>
-          <h3>Follow the numbers</h3>
+          <h4>Follow the numbers</h4>
         </div>
         <div className="boxes">
           <div className="row">
@@ -31,23 +31,15 @@ class Main extends Component {
                   <img className="grid-image" src={startGoal.display_src} alt={startGoal.caption}/>
                 </button>
               </Link>
+              <h4>1. Start Goal</h4>
             </div>
-            <div className="task-boxes col-md-3 row">
-              <Link to="/middlegoals">
-                <button className="col-md-4 task-box">
+            <div className="col-md-3">
+              <Link to="/middlegoals/1">
+                <button className="task-box">
                   <img className="grid-image"/>
                 </button>
               </Link>
-              <Link to="/middlegoals">
-                <button className="col-md-4 task-box">
-                  <img className="grid-image"/>
-                </button>
-              </Link>
-              <Link to="/middlegoals">
-                <button className="col-md-4 task-box">
-                  <img className="grid-image"/>
-                </button>
-              </Link>
+              <h4>2. Middle Goals</h4>
             </div>
             <div className="col-md-3">
               <Link to="/fungoal">
@@ -55,6 +47,7 @@ class Main extends Component {
                   <img className="grid-image" src={funGoal.display_src} alt={funGoal.caption}/>
                 </button>
               </Link>
+              <h4>3. Fun Goal</h4>
             </div>
             <div className="col-md-3">
               <Link to="/targetgoal">
@@ -62,6 +55,7 @@ class Main extends Component {
                   <img className="grid-image" src={targetGoal.display_src} alt={targetGoal.caption}/>
                 </button>
               </Link>
+              <h4>4. Target Goal</h4>
             </div>
           </div>
         </div>

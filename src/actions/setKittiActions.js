@@ -14,6 +14,6 @@ export function setTargetGoal(targetGoal) {
   return { type: 'SET_TARGET_GOAL', targetGoal }
 }
 
-export function setMiddleGoal(middleGoal) {
-  return { type: 'SET_MIDDLE_GOAL', middleGoal }
+export function setMiddleGoal(middleGoals) {
+  return { type: 'SET_MIDDLE_GOAL', middleGoals }
 }

@@ -20,8 +20,7 @@ class FunGoal extends Component {
     return (
       <div className="FunGoal">
         <h3>Please choose your fun goal</h3>
-
-        <Task handleChange={this.handleChange} store={this.props.store}/>
+        <Task handleChange={this.handleChange} store={this.props.store} />
       </div>
     );
   }

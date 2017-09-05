@@ -26,7 +26,7 @@ ReactDOM.render(
         <Route path="/startgoal" component={ StartGoal } />
         <Route path="/fungoal" component={ FunGoal } />
         <Route path="/targetgoal" component={ TargetGoal } />
-        <Route path="/middlegoals" component={ MiddleGoals } />
+        <Route path="/middlegoals/:id" component={ MiddleGoals } />
         <Footer />
       </div>
     </BrowserRouter>

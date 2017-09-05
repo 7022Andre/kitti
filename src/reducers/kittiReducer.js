@@ -20,17 +20,17 @@ const initialState = {
     active: false
   },
   middleGoals: {
-    goal_1: {
+    goal1: {
       caption: "",
       display_src: "",
       active: false
     },
-    goal_2: {
+    goal2: {
       caption: "",
       display_src: "",
       active: false
     },
-    goal_3: {
+    goal3: {
       caption: "",
       display_src: "",
       active: false
@@ -49,7 +49,12 @@ export default function kittiReducer(state = initialState, action) {
     case 'SET_TARGET_GOAL':
       return Object.assign({...state}, action.targetGoal);
     case 'SET_MIDDLE_GOAL':
-      return Object.assign({...state}, action.middleGoals);
+      return Object.assign({
+        ...state,
+        middleGoals: {
+          ...state.middleGoals,
+        }
+      }, action.middleGoals);
     default:
       return state;
   }

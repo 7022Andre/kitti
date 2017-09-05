@@ -20,8 +20,7 @@ class StartGoal extends Component {
     return (
       <div className="StartGoal">
         <h3>Please choose your goal</h3>
-
-        <Task handleChange={this.handleChange} store={this.props.store}/>
+        <Task handleChange={this.handleChange} store={this.props.store} />
       </div>
     );
   }
