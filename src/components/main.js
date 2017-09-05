@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 
 import '../css/main.css';
 import Progress from './common/progress';
+import CreateMiddleGoals from './common/createMiddleGoals';
 import SetTimer from './setTimer';
 import * as setKittiActions from '../actions/setKittiActions';
 
@@ -35,12 +36,7 @@ class Main extends Component {
               <h4>1. Start Goal</h4>
             </div>
             <div className="col-md-3">
-              <Link to="/middlegoals/1">
-                <button className="task-box">
-                  <img className="grid-image"/>
-                </button>
-              </Link>
-              
+              <CreateMiddleGoals middleGoals={middleGoals} />
               <h4>2. Middle Goals</h4>
             </div>
             <div className="col-md-3">
@@ -61,9 +57,7 @@ class Main extends Component {
             </div>
           </div>
         </div>
-        <div className="time-control">
-          <SetTimer />
-        </div>
+        <SetTimer />
       </div>
     );
   }

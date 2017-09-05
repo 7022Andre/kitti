@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import tasks from '../../data/tasks';
 
 export default (props) => {
-  const goal = props['store']["goal" + props.id];
+  const goal = props['store']['goal' + props.id];
 
   return (
     <div className="tasks">
