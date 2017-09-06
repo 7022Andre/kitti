@@ -6,12 +6,13 @@ export default (props) => {
 
   function createGoal (goalNo) {
     const goal = props['middleGoals']['goal' + goalNo];
-
-    <Link to={'/middlegoals/' + goalNo} >
-      <button className='task-box'>
-        <img className='grid-image' src={goal.display_src} alt={goal.caption}/>
-      </button>
-    </Link>
+    return(
+      <Link to={'/middlegoals/' + goalNo} >
+        <button className='task-box'>
+          <img className='grid-image' src={goal.display_src} alt={goal.caption}/>
+        </button>
+      </Link>
+    );
   }
 
   return (
@@ -22,5 +23,3 @@ export default (props) => {
     </div>
   );
 };
-
-//Create first goal by default, other goals only if active ... Link element not created

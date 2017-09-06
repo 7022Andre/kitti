@@ -39,6 +39,8 @@ const initialState = {
 };
 
 export default function kittiReducer(state = initialState, action) {
+  console.log(action)
+  console.log(action.type)
   switch (action.type) {
     case 'SET_TIME':
       return Object.assign({...state}, action.time);
@@ -55,6 +57,8 @@ export default function kittiReducer(state = initialState, action) {
           ...state.middleGoals,
         }
       }, action.middleGoals);
+    case 'RESET_APP':
+      return initialState;
     default:
       return state;
   }

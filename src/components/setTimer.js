@@ -28,7 +28,7 @@ class SetTimer extends Component {
         <div className="time">
           <Time handleChange={this.handleChange} store={this.props.store} createArray={createOptionsArray} />
         </div>
-        <h4>5. Choose time limit for the entire fun timer.</h4>
+        <h5>5. Time limit for entire fun timer.</h5>
       </div>
     );
   }

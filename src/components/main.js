@@ -33,11 +33,11 @@ class Main extends Component {
                   <img className="grid-image" src={startGoal.display_src} alt={startGoal.caption}/>
                 </button>
               </Link>
-              <h4>1. Start Goal</h4>
+              <h5>1. Start Goal</h5>
             </div>
             <div className="col-md-3">
               <CreateMiddleGoals middleGoals={middleGoals} />
-              <h4>2. Middle Goals</h4>
+              <h5>2. Middle Goals</h5>
             </div>
             <div className="col-md-3">
               <Link to="/fungoal">
@@ -45,7 +45,7 @@ class Main extends Component {
                   <img className="grid-image" src={funGoal.display_src} alt={funGoal.caption}/>
                 </button>
               </Link>
-              <h4>3. Fun Goal</h4>
+              <h5>3. Fun Goal</h5>
             </div>
             <div className="col-md-3">
               <Link to="/targetgoal">
@@ -53,11 +53,17 @@ class Main extends Component {
                   <img className="grid-image" src={targetGoal.display_src} alt={targetGoal.caption}/>
                 </button>
               </Link>
-              <h4>4. Target Goal</h4>
+              <h5>4. Target Goal</h5>
             </div>
           </div>
         </div>
+
         <SetTimer />
+        <br />
+        <div className='control-btns'>
+          <button className='btn btn-danger' onClick={() => this.props.actions.resetApp()}>Delete all settings</button>
+          <button className='btn btn-success'>START</button>
+        </div>
       </div>
     );
   }

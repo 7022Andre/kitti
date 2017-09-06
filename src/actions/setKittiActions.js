@@ -17,3 +17,7 @@ export function setTargetGoal(targetGoal) {
 export function setMiddleGoal(middleGoals) {
   return { type: 'SET_MIDDLE_GOAL', middleGoals }
 }
+
+export function resetApp() {
+  return { type: 'RESET_APP' }
+}
