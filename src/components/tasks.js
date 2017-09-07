@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 import * as setKittiActions from '../actions/setKittiActions';
 import tasks from '../data/tasks';
 
-class MiddleGoals extends Component {
+class Tasks extends Component {
   handleChange = (display_src, caption, goalNo) => {
     if (caption === this.props.store[goalNo]['caption']) {
-      this.props.actions.setMiddleGoal({
-        middleGoals: {
+      this.props.actions.setTasks({
+        tasks: {
           ...this.props.store,
           [goalNo]: {
             caption: '',
@@ -20,8 +20,8 @@ class MiddleGoals extends Component {
         }
       });
     } else {
-      this.props.actions.setMiddleGoal({
-        middleGoals: {
+      this.props.actions.setTasks({
+        tasks: {
           ...this.props.store,
           [goalNo]: {
             caption,
@@ -34,16 +34,16 @@ class MiddleGoals extends Component {
   }
 
   render() {
-    const id = parseInt(this.props.match.params.id);
+    const id = parseInt(this.props.match.params.id, 10);
     const next = (id === 3) ? 1 : id + 1;
     const last = (id === 1) ? 3 : id - 1;
     const goal = this.props.store['goal' + id];
 
     return (
-      <div className="MiddleGoals">
+      <div className="Tasks">
         <div className="tasks">
-          <h3>Middle goal {id} of 3</h3>
-          <p>This step is optional. Choose up to three middle goals. Remove a goal by clicking on it again.</p> 
+          <h3>Task {id} of 3</h3>
+          <p>Choose up to three tasks. Remove a task by clicking on it again.</p> 
           <div className="task-grid">
             {tasks.map((task, i) => 
               <figure className={goal.active && goal.caption === task.caption ? "grid-figure active" : "grid-figure"} key={i}>
@@ -57,9 +57,9 @@ class MiddleGoals extends Component {
             )}
           </div>
           <div className="btn-group">
-            <Link to={"/middlegoals/" + last}><button className="btn btn-default">Last goal</button></Link>
+            <Link to={"/tasks/" + last}><button className="btn btn-default">Last task</button></Link>
             <Link to="/main/"><button className="btn btn-success">Back to Dashboard</button></Link>
-            <Link to={"/middlegoals/" + next}><button className="btn btn-default">Next goal</button></Link>
+            <Link to={"/tasks/" + next}><button className="btn btn-default">Next task</button></Link>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@ class MiddleGoals extends Component {
 
 function mapStateToProps(store, ownProps) {
   return {
-    store: store['store']['middleGoals']
+    store: store['store']['tasks']
   };
 }
 
@@ -79,4 +79,4 @@ function mapDispatchProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchProps)(MiddleGoals);
+export default connect(mapStateToProps, mapDispatchProps)(Tasks);

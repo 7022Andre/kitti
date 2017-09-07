@@ -15,7 +15,7 @@ export default () => {
         <h3>Why? Why? Why?</h3>
         <br />
         <p>Help your child understand and visualize time by setting goals.</p>
-        <Link to="/main"><button className="btn btn-success">Get Started</button></Link>
+        <Link to="/main"><button className="btn btn-lg btn-success">Get Started</button></Link>
       </div>
     </div>
   );

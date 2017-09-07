@@ -1,11 +1,11 @@
 const tasks = [
   {
-    "caption": "Action 1",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Bedtime",
+    "display_src": "/img/tasks/blue_bedtime.png",
   },
   {
-    "caption": "Action 2",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Wash Hands",
+    "display_src": "/img/tasks/yel_wash_hands.png",
   },
   {
     "caption": "Action 3",

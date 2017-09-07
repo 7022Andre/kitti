@@ -9,10 +9,9 @@ import Header from './components/common/header';
 import Footer from './components/common/footer';
 import LandingPage from './components/landingPage';
 import Main from './components/main';
-import StartGoal from './components/startGoal';
 import FunGoal from './components/funGoal';
 import TargetGoal from './components/targetGoal';
-import MiddleGoals from './components/middleGoals';
+import Tasks from './components/tasks';
 
 const store = configureStore();
 
@@ -23,10 +22,9 @@ ReactDOM.render(
         <Header />
         <Route exact path="/" component={ LandingPage } />
         <Route path="/main" component={ Main } />
-        <Route path="/startgoal" component={ StartGoal } />
         <Route path="/fungoal" component={ FunGoal } />
         <Route path="/targetgoal" component={ TargetGoal } />
-        <Route path="/middlegoals/:id" component={ MiddleGoals } />
+        <Route path="/tasks/:id" component={ Tasks } />
         <Footer />
       </div>
     </BrowserRouter>

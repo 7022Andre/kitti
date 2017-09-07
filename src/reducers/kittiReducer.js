@@ -4,11 +4,6 @@ const initialState = {
     minutes: 0,
     seconds: 0
   },
-  startGoal: {
-    caption: "",
-    display_src: "",
-    active: false
-  },
   funGoal: {
     caption: "",
     display_src: "",
@@ -19,7 +14,7 @@ const initialState = {
     display_src: "",
     active: false
   },
-  middleGoals: {
+  tasks: {
     goal1: {
       caption: "",
       display_src: "",
@@ -39,8 +34,6 @@ const initialState = {
 };
 
 export default function kittiReducer(state = initialState, action) {
-  console.log(action)
-  console.log(action.type)
   switch (action.type) {
     case 'SET_TIME':
       return Object.assign({...state}, action.time);
@@ -50,13 +43,13 @@ export default function kittiReducer(state = initialState, action) {
       return Object.assign({...state}, action.funGoal);
     case 'SET_TARGET_GOAL':
       return Object.assign({...state}, action.targetGoal);
-    case 'SET_MIDDLE_GOAL':
+    case 'SET_TASKS':
       return Object.assign({
         ...state,
-        middleGoals: {
-          ...state.middleGoals,
+        tasks: {
+          ...state.tasks,
         }
-      }, action.middleGoals);
+      }, action.tasks);
     case 'RESET_APP':
       return initialState;
     default:

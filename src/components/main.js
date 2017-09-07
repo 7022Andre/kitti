@@ -5,65 +5,59 @@ import { bindActionCreators } from 'redux';
 
 import '../css/main.css';
 import Progress from './common/progress';
-import CreateMiddleGoals from './common/createMiddleGoals';
+import CreateTasks from './common/createTasks';
 import SetTimer from './setTimer';
+import Buttons from './common/buttons';
 import * as setKittiActions from '../actions/setKittiActions';
 
 class Main extends Component {
   render() {
-    const startGoal = this.props.store.startGoal;
     const funGoal = this.props.store.funGoal;
     const targetGoal = this.props.store.targetGoal;
-    const middleGoals = this.props.store.middleGoals;
+    const tasks = this.props.store.tasks;
+    const resetApp = this.props.actions.resetApp;
+    
+    const startKitti = () => {
+
+    }
     
     return (
       <div className="Main">
-        <div className="container-fluid">
-          <h1>Dashboard</h1>
-          <h4>Follow the numbers</h4>
+        <div className='dashboard'>
+          <h1>Kitti - Dashboard</h1>
+          <h4>Add tasks and goals by clicking on the box. Then set the timer and start.</h4>
         </div>
         <div className="boxes">
           <div className="row">
             <Progress />
           </div>
           <div className="dash-boxes row">
-            <div className="col-md-3">
-              <Link to="/startgoal">
-                <button className="goal-box">
-                  <img className="grid-image" src={startGoal.display_src} alt={startGoal.caption}/>
-                </button>
-              </Link>
-              <h5>1. Start Goal</h5>
+            <div>
+              <CreateTasks tasks={tasks} />
+              <h5>1. Tasks</h5>
             </div>
-            <div className="col-md-3">
-              <CreateMiddleGoals middleGoals={middleGoals} />
-              <h5>2. Middle Goals</h5>
-            </div>
-            <div className="col-md-3">
+            <div>
               <Link to="/fungoal">
                 <button className="fun-box">
                   <img className="grid-image" src={funGoal.display_src} alt={funGoal.caption}/>
                 </button>
               </Link>
-              <h5>3. Fun Goal</h5>
+              <h5>2. Fun Goal</h5>
             </div>
-            <div className="col-md-3">
+            <div>
               <Link to="/targetgoal">
                 <button className="target-box">
                   <img className="grid-image" src={targetGoal.display_src} alt={targetGoal.caption}/>
                 </button>
               </Link>
-              <h5>4. Target Goal</h5>
+              <h5>3. Target Goal</h5>
             </div>
           </div>
         </div>
 
         <SetTimer />
         <br />
-        <div className='control-btns'>
-          <button className='btn btn-danger' onClick={() => this.props.actions.resetApp()}>Delete all settings</button>
-          <button className='btn btn-success'>START</button>
-        </div>
+        <Buttons startKitti={startKitti} resetApp={resetApp} />
       </div>
     );
   }
