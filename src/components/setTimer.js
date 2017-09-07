@@ -16,19 +16,9 @@ class SetTimer extends Component {
   }
 
   render() {
-    function createOptionsArray(num) {
-      var array = [];
-      for(var i = 0; i < num; i++) {
-        array.push(i);
-      }
-      return array;
-    }
     return (
       <div className="SetTimer">
-        <div className="time">
-          <Time handleChange={this.handleChange} store={this.props.store} createArray={createOptionsArray} />
-        </div>
-        <h5>Time limit for entire fun timer.</h5>
+        <Time handleChange={this.handleChange} store={this.props.store} />
       </div>
     );
   }

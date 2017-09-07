@@ -1,8 +1,7 @@
 const initialState = {
   time: {
     hours: 0,
-    minutes: 0,
-    seconds: 0
+    minutes: 0
   },
   funGoal: {
     caption: "",
