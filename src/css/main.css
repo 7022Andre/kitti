@@ -1,0 +1,32 @@
+.dashboard {
+  margin-top: 1rem;
+  background-color: #AC4A83;
+  height: 13.5rem;
+  padding: 1rem;
+  color: #FCEFF6;
+}
+
+.dash-boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-box,
+.fun-box,
+.target-box {
+  border: 1px solid lightgray;
+  background: white;
+  box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
+  width: 90px;
+  height: 85px;
+  margin: 0 auto;
+}
+
+.task-box {
+  margin: 0 0.5rem;
+}
+
+.grid-image {
+  max-width: 100%;
+  height: auto;
+}

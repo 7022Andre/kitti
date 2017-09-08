@@ -1,0 +1,32 @@
+.task-grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 41.5rem;
+  margin: 2rem auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-figure {
+  margin: 0.5rem;
+  border: 1px solid lightgray;
+  background: white;
+  box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
+}
+
+.grid-figure.active {
+  border: 1.5px solid #AC4A83;
+}
+
+.grid-button {
+  border: none;
+}
+
+.grid-image {
+  opacity: .75;
+  display: block;
+  width: 75px;
+  height: 75px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
