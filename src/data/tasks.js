@@ -4,64 +4,64 @@ const tasks = [
     "display_src": "/img/tasks/blue_bedtime.png",
   },
   {
-    "caption": "Wash Hands",
-    "display_src": "/img/tasks/yel_wash_hands.png",
+    "caption": "Read",
+    "display_src": "/img/tasks/blue_read.png",
   },
   {
-    "caption": "Action 3",
-    "display_src": "/img/tasks_75.png",
+    "caption": "School",
+    "display_src": "/img/tasks/blue_school.png",
   },
   {
-    "caption": "Action 4",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Go potty",
+    "display_src": "/img/tasks/blue_toilet.png",
   },
   {
-    "caption": "Action 5",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Adventure",
+    "display_src": "/img/tasks/grn_backpack.png",
   },
   {
-    "caption": "Action 6",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Get dressed",
+    "display_src": "/img/tasks/grn_dress.png",
   },
   {
-    "caption": "Action 7",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Playtime",
+    "display_src": "/img/tasks/grn_playtime.png",
   },
   {
-    "caption": "Action 8",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Toys away",
+    "display_src": "/img/tasks/grn_toys_away.png",
   },
   {
-    "caption": "Action 9",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Bathtime",
+    "display_src": "/img/tasks/purp_bath.png",
   },
   {
-    "caption": "Action 10",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Comb hair",
+    "display_src": "/img/tasks/purp_hair.png",
   },
   {
-    "caption": "Action 11",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Screentime",
+    "display_src": "/img/tasks/purp_screentime.png",
   },
   {
-    "caption": "Action 12",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Special Star",
+    "display_src": "/img/tasks/purp_star_special.png",
   },
   {
-    "caption": "Action 13",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Take car to ...",
+    "display_src": "/img/tasks/yel_car.png",
   },
   {
-    "caption": "Action 14",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Eat",
+    "display_src": "/img/tasks/yel_eat.png",
   },
   {
-    "caption": "Action 15",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Wash hands",
+    "display_src": "/img/tasks/yel_hands.png",
   },
   {
-    "caption": "Action 16",
-    "display_src": "/img/tasks_75.png",
+    "caption": "Brush teeth",
+    "display_src": "/img/tasks/yel_teeth.png",
   }
 ];
 

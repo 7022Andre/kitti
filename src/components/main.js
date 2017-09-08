@@ -34,7 +34,7 @@ class Main extends Component {
           <div className="dash-boxes row">
             <div>
               <CreateTasks tasks={tasks} />
-              <h5>1. Tasks</h5>
+              <h5>Tasks</h5>
             </div>
             <div>
               <Link to="/fungoal">
@@ -42,7 +42,7 @@ class Main extends Component {
                   <img className="grid-image" src={funGoal.display_src} alt={funGoal.caption}/>
                 </button>
               </Link>
-              <h5>2. Fun Goal</h5>
+              <h5>Fun Goal</h5>
             </div>
             <div>
               <Link to="/targetgoal">
@@ -50,7 +50,7 @@ class Main extends Component {
                   <img className="grid-image" src={targetGoal.display_src} alt={targetGoal.caption}/>
                 </button>
               </Link>
-              <h5>3. Target Goal</h5>
+              <h5>Target Goal</h5>
             </div>
           </div>
         </div>
