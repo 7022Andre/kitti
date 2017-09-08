@@ -6,19 +6,19 @@ import { bindActionCreators } from 'redux';
 import '../css/main.css';
 import Progress from './common/progress';
 import CreateTasks from './common/createTasks';
-import SetTimer from './setTimer';
+import Countdown from './common/countdown';
 import * as setKittiActions from '../actions/setKittiActions';
 
 class Main extends Component {
   render() {
     const funGoal = this.props.store.funGoal;
     const tasks = this.props.store.tasks;
+    const time = this.props.store.time;
     
     return (
       <div className="Main">
         <div className='dashboard'>
           <h1>Kitti - Dashboard</h1>
-          <h4>Add tasks and goals by clicking on the box. Then set the timer and start.</h4>
         </div>
         <div className="boxes">
           <Progress />
@@ -28,24 +28,20 @@ class Main extends Component {
               <h5>Tasks</h5>
             </div>
             <div>
-              <Link to="/fungoal">
-                <button className="fun-box">
-                  <img className="grid-image" src={funGoal.display_src} alt={funGoal.caption}/>
-                </button>
-              </Link>
+              <button className="fun-box">
+                <img className="grid-image" src={funGoal.display_src} alt={funGoal.caption}/>
+              </button>
               <h5>Fun Goal</h5>
             </div>
           </div>
         </div>
 
-        <SetTimer />
+        <Countdown time={time} />
+        <h5>Fun time left</h5>
         <br />
-        <div className='control-btns'>
-          <button className='btn btn-danger' onClick={() => this.props.actions.resetApp()}>Reset</button>
-          <Link to="/run">
-            <button className='btn btn-lg btn-success'>START</button>
-          </Link>
-        </div>
+        <Link to="/main">
+          <button className='btn btn-lg btn-success'>STOP</button>
+        </Link>
       </div>
     );
   }
