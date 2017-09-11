@@ -14,8 +14,16 @@ class Main extends Component {
     const funGoal = this.props.store.funGoal;
     const targetGoal = this.props.store.targetGoal;
     const tasks = this.props.store.tasks;
-    
-    
+    const time = this.props.store.time;
+
+    const checkApp = (history) => {
+      if (time.minutes !== 0 || time.hours !== 0) {
+        this.props.history.push('/run');
+      } else {
+        alert("Please enter a valid time.");
+      }
+    };
+
     return (
       <div className="Main">
         <div className='dashboard'>
@@ -52,9 +60,7 @@ class Main extends Component {
         <br />
         <div className='control-btns'>
           <button className='btn btn-danger' onClick={() => this.props.actions.resetApp()}>Reset</button>
-          <Link to="/run">
-            <button className='btn btn-lg btn-success'>START</button>
-          </Link>
+          <button className='btn btn-lg btn-success' onClick={() => checkApp()}>START</button>
         </div>
       </div>
     );

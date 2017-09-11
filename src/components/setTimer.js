@@ -10,7 +10,7 @@ class SetTimer extends Component {
     this.props.actions.setTime({
       time: {
         ...this.props.store,
-        [param]: value
+        [param]: Number.parseInt(value, 10)
       }
     });
   }

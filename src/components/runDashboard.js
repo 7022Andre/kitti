@@ -9,7 +9,7 @@ import CreateTasks from './common/createTasks';
 import Countdown from './common/countdown';
 import * as setKittiActions from '../actions/setKittiActions';
 
-class Main extends Component {
+class RunDashboard extends Component {
   render() {
     const funGoal = this.props.store.funGoal;
     const targetGoal = this.props.store.targetGoal;
@@ -47,7 +47,7 @@ class Main extends Component {
         <h5>Fun time left</h5>
         <br />
         <Link to="/main">
-          <button className='btn btn-lg btn-success'>STOP</button>
+          <button className='btn btn-lg btn-danger'>STOP</button>
         </Link>
       </div>
     );
@@ -66,4 +66,4 @@ function mapDispatchProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchProps)(Main);
+export default connect(mapStateToProps, mapDispatchProps)(RunDashboard);
