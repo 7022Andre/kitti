@@ -8,6 +8,11 @@ const initialState = {
     display_src: "",
     active: false
   },
+  targetGoal: {
+    caption: "",
+    display_src: "",
+    active: false
+  },
   tasks: {
     goal1: {
       caption: "",
@@ -35,6 +40,8 @@ export default function kittiReducer(state = initialState, action) {
       return Object.assign({...state}, action.startGoal);
     case 'SET_FUN_GOAL':
       return Object.assign({...state}, action.funGoal);
+    case 'SET_TARGET_GOAL':
+      return Object.assign({...state}, action.targetGoal);
     case 'SET_TASKS':
       return Object.assign({
         ...state,

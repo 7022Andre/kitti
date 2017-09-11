@@ -12,9 +12,10 @@ import * as setKittiActions from '../actions/setKittiActions';
 class Main extends Component {
   render() {
     const funGoal = this.props.store.funGoal;
+    const targetGoal = this.props.store.targetGoal;
     const tasks = this.props.store.tasks;
     const time = this.props.store.time;
-    
+
     return (
       <div className="Main">
         <div className='dashboard'>
@@ -32,6 +33,12 @@ class Main extends Component {
                 <img className="grid-image" src={funGoal.display_src} alt={funGoal.caption}/>
               </button>
               <h5>Fun Goal</h5>
+            </div>
+            <div>
+              <button className="target-box">
+                <img className="grid-image" src={targetGoal.display_src} alt={targetGoal.caption}/>
+              </button>
+              <h5>Target Goal</h5>
             </div>
           </div>
         </div>
