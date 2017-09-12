@@ -34,3 +34,8 @@
   max-width: 100%;
   height: auto;
 }
+
+.countdown {
+  height: 150px;
+  padding-right: 15rem;
+}

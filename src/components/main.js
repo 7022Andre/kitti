@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import '../css/main.css';
-import Progress from './common/progress';
 import CreateTasks from './common/createTasks';
 import SetTimer from './setTimer';
 import * as setKittiActions from '../actions/setKittiActions';
@@ -31,7 +30,6 @@ class Main extends Component {
           <h4>Add tasks and goals by clicking on the box. Then set the timer and start.</h4>
         </div>
         <div className="boxes">
-          <Progress />
           <div className="dash-boxes">
             <div>
               <CreateTasks tasks={tasks} />

@@ -2,11 +2,10 @@ import React, { Component} from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import ReactCountdownClock from 'react-countdown-clock';
 
 import '../css/main.css';
-import Progress from './common/progress';
 import CreateTasks from './common/createTasks';
-import Countdown from './common/countdown';
 import * as setKittiActions from '../actions/setKittiActions';
 
 class RunDashboard extends Component {
@@ -15,6 +14,7 @@ class RunDashboard extends Component {
     const targetGoal = this.props.store.targetGoal;
     const tasks = this.props.store.tasks;
     const time = this.props.store.time;
+    const countdown = ((time.hours * 60) + time.minutes) * 60;
 
     return (
       <div className="Main">
@@ -22,7 +22,6 @@ class RunDashboard extends Component {
           <h1>Kitti - Dashboard</h1>
         </div>
         <div className="boxes">
-          <Progress />
           <div className="dash-boxes">
             <div>
               <CreateTasks tasks={tasks} />
@@ -42,10 +41,14 @@ class RunDashboard extends Component {
             </div>
           </div>
         </div>
-
-        <Countdown time={time} />
-        <h5>Fun time left</h5>
-        <br />
+        <div className="countdown">
+          <ReactCountdownClock seconds={countdown}
+                               color="#AC4A83"
+                               alpha={0.9}
+                               size={150}
+                                />
+        </div>
+          <br />
         <Link to="/main">
           <button className='btn btn-lg btn-danger'>STOP</button>
         </Link>
