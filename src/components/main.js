@@ -16,7 +16,7 @@ class Main extends Component {
     const time = this.props.store.time;
 
     const checkApp = (history) => {
-      if (time.minutes !== 0 || time.hours !== 0) {
+      if ((time.minutes > 0 && time.minutes <= 60) || (time.hours > 0 && time.hours <= 5)) {
         this.props.history.push('/run');
       } else {
         alert("Please enter a valid time.");
