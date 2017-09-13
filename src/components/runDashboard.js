@@ -1,12 +1,11 @@
 import React, { Component} from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import ReactCountdownClock from 'react-countdown-clock';
+import Progress from 'react-progressbar';
 
 import '../css/main.css';
-import CreateTasks from './common/createTasks';
-import * as setKittiActions from '../actions/setKittiActions';
+import ShowTasks from './common/showTasks';
 
 class RunDashboard extends Component {
   render() {
@@ -22,9 +21,12 @@ class RunDashboard extends Component {
           <h1>Kitti - Dashboard</h1>
         </div>
         <div className="boxes">
+          <div>
+            <Progress completed={10} />
+          </div>
           <div className="dash-boxes">
             <div>
-              <CreateTasks tasks={tasks} />
+              <ShowTasks tasks={tasks} />
               <h5>Tasks</h5>
             </div>
             <div>
@@ -48,7 +50,8 @@ class RunDashboard extends Component {
                                size={150}
                                 />
         </div>
-          <br />
+        <h2>Fun time left</h2>
+        <br />
         <Link to="/main">
           <button className='btn btn-lg btn-danger'>STOP</button>
         </Link>
@@ -63,10 +66,4 @@ function mapStateToProps(store, ownProps) {
   };
 }
 
-function mapDispatchProps(dispatch) {
-  return {
-    actions: bindActionCreators(setKittiActions, dispatch)
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchProps)(RunDashboard);
+export default connect(mapStateToProps)(RunDashboard);
