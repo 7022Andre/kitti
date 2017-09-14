@@ -7,9 +7,8 @@ export default () => {
     <div className="Header">
       <ul className="nav nav-tabs">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/main">Dashboard</Link></li>
-        <li><a href="#">About</a></li>
-        <li className="pull-right"><a href="#">Sign up | Login</a></li>
+        <li><Link to="/">How to?</Link></li>
+        <li><a href="/about">About</a></li>
       </ul>
     </div>
   );
