@@ -8,12 +8,34 @@ import '../css/main.css';
 import ShowTasks from './common/showTasks';
 
 class RunDashboard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { percent: 0,
+                   countdown: ((this.props.store.time.hours * 60) + this.props.store.time.minutes) * 60
+                 };
+    this.increment = 100 / this.state.countdown;
+    this.timer = this.timer.bind(this);
+  }
+
+  timer() {
+    this.setState({ percent: this.state.percent + this.increment });
+    if (this.state.percent > 99) { 
+      clearInterval(this.interval);
+    }
+  }
+
+  componentDidMount() {
+     this.interval = setInterval(this.timer, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   render() {
     const funGoal = this.props.store.funGoal;
     const targetGoal = this.props.store.targetGoal;
     const tasks = this.props.store.tasks;
-    const time = this.props.store.time;
-    const countdown = ((time.hours * 60) + time.minutes) * 60;
 
     return (
       <div className="Main">
@@ -21,8 +43,8 @@ class RunDashboard extends Component {
           <h1>Kitti - Dashboard</h1>
         </div>
         <div className="boxes">
-          <div>
-            <Progress completed={10} />
+          <div className="progressbar">
+            <Progress completed={this.state.percent} color="#AC4A83" />
           </div>
           <div className="dash-boxes">
             <div>
@@ -44,7 +66,7 @@ class RunDashboard extends Component {
           </div>
         </div>
         <div className="countdown">
-          <ReactCountdownClock seconds={countdown}
+          <ReactCountdownClock seconds={this.state.countdown}
                                color="#AC4A83"
                                alpha={0.9}
                                size={150}
