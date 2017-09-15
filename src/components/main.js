@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -23,17 +23,22 @@ class Main extends Component {
       }
     };
 
+    const resetApp = () => {
+      this.props.actions.resetApp();
+      alert("Reset successful.")
+    };
+
     return (
       <div className="Main">
         <div className='dashboard'>
           <h1>Kitti - Dashboard</h1>
-          <h4>Add tasks and goals by clicking on the box. Then set the timer and start.</h4>
+          <h4>Add tasks, reward and activity by clicking on a box. Then set the timer and hit start.</h4>
         </div>
         <div className="boxes">
           <div className="dash-boxes">
             <div>
               <CreateTasks tasks={tasks} />
-              <h5>Tasks</h5>
+              <h5>Task(s)</h5>
             </div>
             <div>
               <Link to="/fungoal">
@@ -41,7 +46,7 @@ class Main extends Component {
                   <img className="grid-image" src={funGoal.display_src} alt={funGoal.caption}/>
                 </button>
               </Link>
-              <h5>Fun Goal</h5>
+              <h5>Reward</h5>
             </div>
             <div>
               <Link to="/targetgoal">
@@ -49,7 +54,7 @@ class Main extends Component {
                   <img className="grid-image" src={targetGoal.display_src} alt={targetGoal.caption}/>
                 </button>
               </Link>
-              <h5>Target Goal</h5>
+              <h5>Activity</h5>
             </div>
           </div>
         </div>
@@ -57,7 +62,7 @@ class Main extends Component {
         <SetTimer />
         <br />
         <div className='control-btns'>
-          <button className='btn btn-danger' onClick={() => this.props.actions.resetApp()}>Reset</button>
+          <button className='btn btn-danger' onClick={() => resetApp()}>Reset</button>
           <button className='btn btn-lg btn-success' onClick={() => checkApp()}>START</button>
         </div>
       </div>

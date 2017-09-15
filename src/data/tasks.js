@@ -48,7 +48,7 @@ const tasks = [
     "display_src": "/img/tasks/purp_star_special.png",
   },
   {
-    "caption": "Take car to ...",
+    "caption": "Drive to ...",
     "display_src": "/img/tasks/yel_car.png",
   },
   {

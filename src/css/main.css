@@ -43,4 +43,5 @@
 
 .progressbar {
   margin: 4rem 0;
+  border: 2px solid lightgray;
 }

@@ -13,7 +13,7 @@ export default (props) => {
           onChange={(e) => props.handleChange(e.target.value, 'hours')}
           min="0"
           max="5" />
-        <h5>Hour(s) (max 5 hours)</h5>
+        <h5>Hour(s)</h5>
       </div>
       <div className="input-minutes input-group">
         <input
@@ -23,7 +23,7 @@ export default (props) => {
           onChange={(e) => props.handleChange(e.target.value, 'minutes')}
           min="0"
           max="60" />
-        <h5>Minute(s) (max 60min)</h5>
+        <h5>Minute(s)</h5>
       </div>
     </div>
   );
