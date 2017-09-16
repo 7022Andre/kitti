@@ -16,7 +16,7 @@ class Main extends Component {
     const time = this.props.store.time;
 
     const checkApp = (history) => {
-      if ((time.minutes > 0 && time.minutes <= 60) || (time.hours > 0 && time.hours <= 5)) {
+      if (time.minutes > 0 || time.hours > 0) {
         this.props.history.push('/run');
       } else {
         alert("Please enter a valid time.");
@@ -25,13 +25,13 @@ class Main extends Component {
 
     const resetApp = () => {
       this.props.actions.resetApp();
-      alert("Reset successful.")
+      alert("Kitt has been reset.")
     };
 
     return (
       <div className="Main">
         <div className='dashboard'>
-          <h1>Kitti - Dashboard</h1>
+          <h1>Kitti - Main Menu</h1>
           <h4>Add tasks, reward and activity by clicking on a box. Then set the timer and hit start.</h4>
         </div>
         <div className="boxes">
@@ -60,6 +60,7 @@ class Main extends Component {
         </div>
 
         <SetTimer />
+        <h5>Time limit for entire fun timer.</h5>
         <br />
         <div className='control-btns'>
           <button className='btn btn-danger' onClick={() => resetApp()}>Reset</button>

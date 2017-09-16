@@ -45,7 +45,8 @@ class RunDashboard extends Component {
     return (
       <div className="Main">
         <div className='dashboard'>
-          <h1>Kitti - Dashboard</h1>
+          <h1>Kitti</h1>
+          <h4>Timer Overview</h4>
         </div>
         <div className="boxes">
           <div className="progressbar">

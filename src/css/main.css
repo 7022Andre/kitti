@@ -18,21 +18,17 @@
 .task-box,
 .fun-box,
 .target-box {
+  display: inline-flex;
+  justify-content: center;
   border: 1px solid lightgray;
   background: white;
   box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
-  width: 90px;
-  height: 90px;
-  margin: 0 auto;
+  width: 20vh;
+  height: 20vh;
 }
 
 .task-box {
   margin: 0 0.5rem;
-}
-
-.grid-image {
-  max-width: 100%;
-  height: auto;
 }
 
 .countdown {

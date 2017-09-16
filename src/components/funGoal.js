@@ -19,7 +19,7 @@ class FunGoal extends Component {
   render() {
     return (
       <div className="FunGoal">
-        <h3>Please choose your fun goal</h3>
+        <h3>Choose a reward.</h3>
         <Task handleChange={this.handleChange} store={this.props.store} />
       </div>
     );

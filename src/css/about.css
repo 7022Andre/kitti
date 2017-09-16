@@ -12,5 +12,6 @@
 }
 
 .About-content {
- width: 70rem;
+ width: 95vh;
+ font-size: 1.75rem;
 }

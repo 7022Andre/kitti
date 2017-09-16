@@ -19,7 +19,7 @@ class TargetGoal extends Component {
   render() {
     return (
       <div className="TargetGoal">
-        <h3>Please choose your target goal</h3>
+        <h3>Choose an activity.</h3>
         <Task handleChange={this.handleChange} store={this.props.store} />
       </div>
     );

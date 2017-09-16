@@ -1,10 +1,9 @@
 .task-grid {
   display: flex;
   flex-wrap: wrap;
-  max-width: 41.5rem;
+  max-width: 100vh;
   margin: 2rem auto;
   justify-content: center;
-  align-items: center;
 }
 
 .grid-figure {
@@ -15,7 +14,7 @@
 }
 
 .grid-figure.active {
-  border: 1.5px solid #AC4A83;
+  border: 3px solid #AC4A83;
 }
 
 .grid-button {
@@ -25,8 +24,8 @@
 .grid-image {
   opacity: .75;
   display: block;
-  width: 75px;
-  height: 75px;
+  width: 18vh;
+  height: 18vh;
   transition: .5s ease;
   backface-visibility: hidden;
 }
