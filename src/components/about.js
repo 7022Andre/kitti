@@ -11,11 +11,11 @@ export default () => {
         <div className="About-content">
           <h3>What is Kitti?</h3>
           <p>
-            Kitti is an app that (hopefully) helps your child to understand time by visualizing it
-            rather than just talking about it.
+            You and your child choose a task, reward and activity and set the timer. A progressbar and
+            countdown will visualize the remaining fun time.
           </p>
           
-          <h3>Kitti? That's a weird name.</h3>
+          <h3>Kitti?</h3>
           <p>
             Kitti is an abbreviation for <strong>Ki</strong>ds Ac<strong>t</strong>ivi<strong>t</strong>y
             T<strong>i</strong>mer and also sounds like a small cat ... meow.

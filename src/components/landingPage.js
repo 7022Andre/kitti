@@ -6,7 +6,7 @@ export default () => {
   return (
     <div className="Landing">
       <div className="Landing-main">
-        <img src={process.env.PUBLIC_URL + 'img/logo.png'} className="Landing-logo" alt="logo" />
+        <img src={process.env.PUBLIC_URL + 'img/logo.gif'} className="Landing-logo" alt="logo" />
         <h1>Welcome to Kitti</h1>
         <h3>A Kids Activity Fun Timer</h3>
       </div>
