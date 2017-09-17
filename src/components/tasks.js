@@ -45,7 +45,14 @@ class Tasks extends Component {
       <div className="Tasks">
         <div className="tasks">
           <h3>Task {id} of 3</h3>
-          <p>Choose up to three tasks. Remove a task by clicking on it again.</p> 
+          <h4>Choose up to three tasks. Remove a task by clicking on it again.</h4>
+          
+          <div className="btn-group">
+            <Link to={"/tasks/" + last}><button className="btn btn-default">Last task</button></Link>
+            <Link to="/main/"><button className="btn btn-success">Back to Dashboard</button></Link>
+            <Link to={"/tasks/" + next}><button className="btn btn-default">Next task</button></Link>
+          </div>
+
           <div className="task-grid">
             {tasks.map((task, i) => 
               <figure className={goal.active && goal.caption === task.caption ? "grid-figure active" : "grid-figure"} key={i}>
@@ -57,11 +64,6 @@ class Tasks extends Component {
                 </figcaption>
               </figure>
             )}
-          </div>
-          <div className="btn-group">
-            <Link to={"/tasks/" + last}><button className="btn btn-default">Last task</button></Link>
-            <Link to="/main/"><button className="btn btn-success">Back to Dashboard</button></Link>
-            <Link to={"/tasks/" + next}><button className="btn btn-default">Next task</button></Link>
           </div>
         </div>
       </div>

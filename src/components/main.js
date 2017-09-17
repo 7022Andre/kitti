@@ -16,7 +16,9 @@ class Main extends Component {
     const time = this.props.store.time;
 
     const checkApp = (history) => {
-      if (time.minutes > 0 || time.hours > 0) {
+      if (!funGoal.active || !targetGoal.active || !tasks.goal1.active) {
+        alert("Please choose at least one task, reward and activity.");
+      } else if (time.minutes > 0 || time.hours > 0) {
         this.props.history.push('/run');
       } else {
         alert("Please enter a valid time.");
@@ -31,8 +33,8 @@ class Main extends Component {
     return (
       <div className="Main">
         <div className='dashboard'>
-          <h1>Kitti - Main Menu</h1>
-          <h4>Add tasks, reward and activity by clicking on a box. Then set the timer and hit start.</h4>
+          <h1>Kitti - Settings</h1>
+          <h4>Add tasks, reward and activity by clicking on the box. Then set the timer and hit start.</h4>
         </div>
         <div className="boxes">
           <div className="dash-boxes">
@@ -43,7 +45,7 @@ class Main extends Component {
             <div>
               <Link to="/fungoal">
                 <button className="fun-box">
-                  <img className="grid-image" src={funGoal.display_src} alt={funGoal.caption}/>
+                  <img className="main-image" src={funGoal.display_src} alt={funGoal.caption}/>
                 </button>
               </Link>
               <h5>Reward</h5>
@@ -51,7 +53,7 @@ class Main extends Component {
             <div>
               <Link to="/targetgoal">
                 <button className="target-box">
-                  <img className="grid-image" src={targetGoal.display_src} alt={targetGoal.caption}/>
+                  <img className="main-image" src={targetGoal.display_src} alt={targetGoal.caption}/>
                 </button>
               </Link>
               <h5>Activity</h5>
@@ -62,10 +64,10 @@ class Main extends Component {
         <SetTimer />
         <h5>Time limit for entire fun timer.</h5>
         <br />
-        <div className='control-btns'>
-          <button className='btn btn-danger' onClick={() => resetApp()}>Reset</button>
-          <button className='btn btn-lg btn-success' onClick={() => checkApp()}>START</button>
-        </div>
+        <button className='btn btn-lg btn-success' onClick={() => checkApp()}>START</button>
+        <br />
+        <br />
+        <button className='btn btn-danger' onClick={() => resetApp()}>Reset</button>
       </div>
     );
   }

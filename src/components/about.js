@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/about.css';
 
 export default () => {
@@ -68,6 +69,7 @@ export default () => {
           </div>
         </div>
       </div>
+      <Link to="/main"><button className="btn btn-lg btn-success">Get Started</button></Link>
     </div>
   );
 }

@@ -21,7 +21,7 @@ const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <div className="container-fluid">
+      <div>
         <Header />
         <Switch>
           <Route exact path="/" component={ LandingPage } />

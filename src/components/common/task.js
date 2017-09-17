@@ -7,6 +7,7 @@ import tasks from '../../data/tasks';
 export default (props) => {
   return (
     <div className="tasks">
+      <Link to="/main"><button className="btn btn-success">Back to dashboard</button></Link>
       <div className="task-grid">
         {tasks.map((task, i) => 
           <figure className={props.store.active && props.store.caption === task.caption ? "grid-figure active" : "grid-figure"} key={i}>
@@ -19,7 +20,6 @@ export default (props) => {
           </figure>
         )}
       </div>
-      <Link to="/main"><button className="btn btn-success">Back to dashboard</button></Link>
     </div>
   );
 };
