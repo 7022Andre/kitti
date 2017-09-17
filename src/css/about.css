@@ -9,9 +9,15 @@
 .About-feature {
   display: flex;
   justify-content: center;
+  text-align: left;
 }
 
 .About-content {
- width: 95vh;
+ width: 120vh;
  font-size: 1.75rem;
+ margin-top: 2rem;
+}
+
+.content {
+  padding: 1rem;
 }

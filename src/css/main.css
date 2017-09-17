@@ -23,8 +23,8 @@
   border: 1px solid lightgray;
   background: white;
   box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
-  width: 20vh;
-  height: 20vh;
+  width: 15vh;
+  height: 15vh;
 }
 
 .task-box {

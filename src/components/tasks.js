@@ -7,7 +7,9 @@ import * as setKittiActions from '../actions/setKittiActions';
 import tasks from '../data/tasks';
 
 class Tasks extends Component {
-  handleChange = (display_src, caption, goalNo) => {
+  handleChange = (display_src, caption, id) => {
+    const goalNo = "goal" + id;
+
     if (caption === this.props.store[goalNo]['caption']) {
       this.props.actions.setTasks({
         tasks: {
@@ -47,7 +49,7 @@ class Tasks extends Component {
           <div className="task-grid">
             {tasks.map((task, i) => 
               <figure className={goal.active && goal.caption === task.caption ? "grid-figure active" : "grid-figure"} key={i}>
-                <button className="grid-button" onClick={() => this.handleChange(process.env.PUBLIC_URL + task.display_src, task.caption, "goal" + id)}>
+                <button className="grid-button" onClick={() => this.handleChange(process.env.PUBLIC_URL + task.display_src, task.caption, id)}>
                   <img className="grid-image" src={process.env.PUBLIC_URL + task.display_src} alt={task.caption}/>
                 </button>
                 <figcaption>

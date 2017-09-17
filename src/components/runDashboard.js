@@ -37,7 +37,7 @@ class RunDashboard extends Component {
     const targetGoal = this.props.store.targetGoal;
     const tasks = this.props.store.tasks;
 
-    const timerDone = () => {
+    const timerDone = (history) => {
       alert("Time's up. Click ok to start another timer.");
       this.props.history.push('/main');
     };

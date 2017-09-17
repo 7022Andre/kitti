@@ -3,20 +3,19 @@ A kids activity fun timer written in ReactJS.
 
 ### Summary
 
-* Written in React.js (15.6.1)
+* React.js (15.6.1)
 * Includes following modules:
-
-* redux (5.0.6)
-* react-router (4.1.2)
-* react-countdown-clock
-* react-progressbar
-* react-numeric-input
+-- redux (5.0.6)
+-- react-router (4.1.2)
+-- react-countdown-clock
+-- react-progressbar
+-- react-numeric-input
 
 ### What is Kitti?
 
 Kitti is an app that'll help your child to understand time by visualizing it rather than just talking about it. You and your child choose a task, reward and activity and set the timer. A progressbar and countdown will visualize the remaining fun time.
 
-[![dash.png](https://s26.postimg.org/6bfj2zrp5/dash.png)](https://postimg.org/image/hb0qeli45/)
+![dash.png](https://s26.postimg.org/6bfj2zrp5/dash.png)
 
 ### Kitti?
 
