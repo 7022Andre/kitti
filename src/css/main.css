@@ -1,16 +1,25 @@
-.dashboard {
+.dashboard,
+.run-dashboard {
   margin: 1rem;
   background-color: #AC4A83;
-  height: 13.5rem;
+  height: 9rem;
   padding: 1rem;
   color: #FCEFF6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.run-dashboard {
+  margin: 1rem;
 }
 
 .boxes {
-  margin: 5rem 7rem 0 7rem;
+  margin: 2rem 7rem 0 7rem;
 }
 
 .dash-boxes {
+  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
 }
@@ -34,7 +43,7 @@
 .countdown {
   height: 150px;
   padding-right: 15rem;
-  margin-top: 6rem;
+  margin-top: 3.5rem;
 }
 
 .progressbar {

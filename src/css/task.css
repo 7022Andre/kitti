@@ -1,7 +1,17 @@
+.task-button {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.task-buttons {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .task-grid {
   display: flex;
   flex-wrap: wrap;
-  max-width: 70vh;
+  max-width: 50rem;
   margin: 2rem auto;
   justify-content: center;
 }

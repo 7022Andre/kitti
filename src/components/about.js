@@ -5,30 +5,30 @@ import '../css/about.css';
 export default () => {
   return (
     <div className="About">
-      <div className="About-main">
+      <div className="about-main">
+        <img src={process.env.PUBLIC_URL + 'img/logo.gif'} className="Landing-logo" alt="logo" />
         <h1>About Kitti</h1>
+        <img src={process.env.PUBLIC_URL + 'img/logo.gif'} className="Landing-logo" alt="logo" />
       </div>
-      <div className="About-feature">
-        <div className="About-content">
-          <div className="row">
-            <div className="col-md-6 content">
-              <h3>What is Kitti?</h3>
-              <p>
-                You and your child choose a task, reward and activity and set the timer. A progressbar and
-                countdown will visualize the remaining fun time.
-              </p>
-            </div>
-            
-            <div className="col-md-6 content">
-              <h3>Kitti?</h3>
-              <p>
-                Kitti is the abbreviation for <strong>Ki</strong>ds Ac<strong>t</strong>ivi<strong>t</strong>y
-                T<strong>i</strong>mer and also sounds like a small cat ... meow.
-              </p>
-            </div>
+      <div className="about-feature">
+        <div className="about-content">
+          <div className="row about-content">
+            <h3>What is Kitti?</h3>
+            <p>
+              You and your child choose a task, reward and activity and set the timer. A progressbar and
+              countdown will visualize the remaining fun time.
+            </p>
+          </div>
+          
+          <div className="row about-content">
+            <h3>Kitti?</h3>
+            <p>
+              Kitti is the abbreviation for <strong>Ki</strong>ds Ac<strong>t</strong>ivi<strong>t</strong>y
+              T<strong>i</strong>mer and also sounds like a small cat ... meow.
+            </p>
           </div>
 
-          <div className="row content">
+          <div className="row about-content">
             <h3>How does it work? What can I do with it?</h3>
             <p>
               Check out a demo at <a href=''>here</a> to see how it works.
@@ -40,7 +40,7 @@ export default () => {
             </p>
           </div>
 
-          <div className="row content">
+          <div className="row about-content">
             <h3>How and why did you write Kitti?</h3>
             <p>
               Kitti is my capstone project at Bloc.io - a mentorship- and project-based coding school.
@@ -56,7 +56,7 @@ export default () => {
             </p>
           </div>
 
-          <div className="row content">
+          <div className="row about-content">
             <h3>Boring coding stuff</h3>
             <p>Kitti was written in React.js (15.6.1) and includes the following modules:</p>
             <ul>

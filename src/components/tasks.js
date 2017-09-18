@@ -47,10 +47,16 @@ class Tasks extends Component {
           <h3>Task {id} of 3</h3>
           <h4>Choose up to three tasks. Remove a task by clicking on it again.</h4>
           
-          <div className="btn-group">
-            <Link to={"/tasks/" + last}><button className="btn btn-default">Last task</button></Link>
-            <Link to="/main/"><button className="btn btn-success">Back to Dashboard</button></Link>
-            <Link to={"/tasks/" + next}><button className="btn btn-default">Next task</button></Link>
+          <div className="task-buttons">
+            <Link to={"/tasks/" + last}>
+              <button className="btn btn-default">Last task</button>
+            </Link>
+            <Link to="/main/">
+              <button className="btn btn-warning">Back to Dashboard</button>
+            </Link>
+            <Link to={"/tasks/" + next}>
+              <button className="btn btn-default">Next task</button>
+            </Link>
           </div>
 
           <div className="task-grid">

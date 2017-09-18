@@ -32,11 +32,13 @@ class Main extends Component {
 
     return (
       <div className="Main">
-        <div className='dashboard'>
+        <div className="dashboard">
+          <p></p>
           <h1>Kitti - Settings</h1>
-          <h4>Add up to three tasks, a reward and an activity by clicking on a box. Then set the timer and hit start.</h4>
+          <p></p>
         </div>
         <div className="boxes">
+          <h4>Add up to three tasks, a reward and an activity by clicking on a box. Then set the timer and hit start.</h4>
           <div className="dash-boxes">
             <div>
               <CreateTasks tasks={tasks} />
@@ -62,7 +64,7 @@ class Main extends Component {
         </div>
 
         <SetTimer />
-        <h5>Time limit for entire fun timer.</h5>
+        <h5>Time limit</h5>
         <br />
         <button className='btn btn-lg btn-success' onClick={() => checkApp()}>START</button>
         <br />

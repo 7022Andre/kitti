@@ -52,14 +52,16 @@ class RunDashboard extends Component {
 
     const timerDone = (history) => {
       this.alert.play();
-      alert("Time's up. Start over?");
+      alert("Time's up. Start again?");
       this.props.history.push('/main');
     };
 
     return (
       <div className="Main">
-        <div className="dashboard">
+        <div className="run-dashboard">
+          <p></p>
           <h1>Kitti - Activity Timer</h1>
+          <p></p>
         </div>
         <div className="boxes">
           <div className="progressbar">
