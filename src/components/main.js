@@ -34,7 +34,7 @@ class Main extends Component {
       <div className="Main">
         <div className='dashboard'>
           <h1>Kitti - Settings</h1>
-          <h4>Add tasks, reward and activity by clicking on the box. Then set the timer and hit start.</h4>
+          <h4>Add up to three tasks, a reward and an activity by clicking on a box. Then set the timer and hit start.</h4>
         </div>
         <div className="boxes">
           <div className="dash-boxes">
