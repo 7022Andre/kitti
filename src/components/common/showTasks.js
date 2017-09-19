@@ -7,7 +7,7 @@ export default (props) => {
     const goal = goals['goal' + goalNo];
     return (
       <button className='task-box'>
-        <img className='grid-image' src={goal.display_src} alt={goal.caption}/>
+        <img className='main-image' src={goal.display_src} alt={goal.caption}/>
       </button>
     );
   }

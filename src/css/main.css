@@ -1,16 +1,9 @@
-.dashboard {
-  margin: 1rem;
-  background-color: #AC4A83;
-  height: 13.5rem;
-  padding: 1rem;
-  color: #FCEFF6;
-}
-
 .boxes {
-  margin: 5rem 7rem 0 7rem;
+  margin: 2rem 7rem 0 7rem;
 }
 
 .dash-boxes {
+  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
 }
@@ -18,25 +11,26 @@
 .task-box,
 .fun-box,
 .target-box {
+  display: inline-flex;
+  justify-content: center;
   border: 1px solid lightgray;
   background: white;
   box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
-  width: 90px;
-  height: 90px;
-  margin: 0 auto;
+  width: 15vh;
+  height: 15vh;
 }
 
 .task-box {
   margin: 0 0.5rem;
 }
 
-.grid-image {
-  max-width: 100%;
-  height: auto;
-}
-
 .countdown {
   height: 150px;
   padding-right: 15rem;
-  margin-top: 6rem;
+  margin-top: 3.5rem;
+}
+
+.progressbar {
+  margin: 4rem 0;
+  border: 2px solid lightgray;
 }

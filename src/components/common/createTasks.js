@@ -9,7 +9,7 @@ export default (props) => {
     return (
       <Link to={'/tasks/' + goalNo} >
         <button className='task-box'>
-          <img className='grid-image' src={goal.display_src} alt={goal.caption}/>
+          <img className='main-image' src={goal.display_src} alt={goal.caption}/>
         </button>
       </Link>
     );

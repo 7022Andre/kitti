@@ -1,10 +1,14 @@
+.task-buttons {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .task-grid {
   display: flex;
   flex-wrap: wrap;
-  max-width: 41.5rem;
+  max-width: 50rem;
   margin: 2rem auto;
   justify-content: center;
-  align-items: center;
 }
 
 .grid-figure {
@@ -15,18 +19,24 @@
 }
 
 .grid-figure.active {
-  border: 1.5px solid #AC4A83;
+  border: 3px solid #AC4A83;
 }
 
 .grid-button {
   border: none;
 }
 
-.grid-image {
+.grid-image,
+.main-image {
   opacity: .75;
   display: block;
-  width: 75px;
-  height: 75px;
+  width: 80px;
+  height: 80px;
   transition: .5s ease;
   backface-visibility: hidden;
+}
+
+.main-image {
+  width: 13vh;
+  height: 13vh;
 }

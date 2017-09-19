@@ -3,11 +3,14 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
+import Header from './common/kittiHeader'
 import * as setKittiActions from '../actions/setKittiActions';
 import tasks from '../data/tasks';
 
 class Tasks extends Component {
-  handleChange = (display_src, caption, goalNo) => {
+  handleChange = (display_src, caption, id) => {
+    const goalNo = "goal" + id;
+
     if (caption === this.props.store[goalNo]['caption']) {
       this.props.actions.setTasks({
         tasks: {
@@ -42,12 +45,24 @@ class Tasks extends Component {
     return (
       <div className="Tasks">
         <div className="tasks">
-          <h3>Task {id} of 3</h3>
-          <p>Choose up to three tasks. Remove a task by clicking on it again.</p> 
+          <Header title={"Set Task "} taskId={id} subtitle={"Choose up to three tasks. Remove a task by clicking on it again."}/>
+          
+          <div className="task-buttons">
+            <Link to={"/tasks/" + last}>
+              <button className="btn btn-default">Last task</button>
+            </Link>
+            <Link to="/main/">
+              <button className="btn btn-warning">GO BACK</button>
+            </Link>
+            <Link to={"/tasks/" + next}>
+              <button className="btn btn-default">Next task</button>
+            </Link>
+          </div>
+
           <div className="task-grid">
             {tasks.map((task, i) => 
               <figure className={goal.active && goal.caption === task.caption ? "grid-figure active" : "grid-figure"} key={i}>
-                <button className="grid-button" onClick={() => this.handleChange(process.env.PUBLIC_URL + task.display_src, task.caption, "goal" + id)}>
+                <button className="grid-button" onClick={() => this.handleChange(process.env.PUBLIC_URL + task.display_src, task.caption, id)}>
                   <img className="grid-image" src={process.env.PUBLIC_URL + task.display_src} alt={task.caption}/>
                 </button>
                 <figcaption>
@@ -55,11 +70,6 @@ class Tasks extends Component {
                 </figcaption>
               </figure>
             )}
-          </div>
-          <div className="btn-group">
-            <Link to={"/tasks/" + last}><button className="btn btn-default">Last task</button></Link>
-            <Link to="/main/"><button className="btn btn-success">Back to Dashboard</button></Link>
-            <Link to={"/tasks/" + next}><button className="btn btn-default">Next task</button></Link>
           </div>
         </div>
       </div>
