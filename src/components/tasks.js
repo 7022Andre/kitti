@@ -45,7 +45,7 @@ class Tasks extends Component {
     return (
       <div className="Tasks">
         <div className="tasks">
-          <Header title={"Set Task "} taskId={id} subtitle={"Choose up to three tasks. Remove a task by clicking on it again."}/>
+          <Header title={"Set Task "} taskId={id} subtitle={"Up to three tasks. Remove task by clicking on it."}/>
           
           <div className="task-buttons">
             <Link to={"/tasks/" + last}>

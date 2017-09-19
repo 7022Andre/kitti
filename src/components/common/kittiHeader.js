@@ -7,7 +7,7 @@ export default (props) => {
     <div className="comp-header">
       <img src={Logo} className="logo" alt="logo" />
       <div>
-      <h1>{props.title}{props.taskId}</h1>
+      <h2>{props.title}{props.taskId}</h2>
       <h4>{props.subtitle}</h4>
       </div>
       <img src={Logo} className="logo" alt="logo" />
