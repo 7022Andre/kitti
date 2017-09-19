@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import '../css/main.css';
+import Header from './common/kittiHeader'
 import CreateTasks from './common/createTasks';
 import SetTimer from './setTimer';
 import * as setKittiActions from '../actions/setKittiActions';
@@ -32,11 +33,7 @@ class Main extends Component {
 
     return (
       <div className="Main">
-        <div className="dashboard">
-          <p></p>
-          <h1>Kitti - Settings</h1>
-          <p></p>
-        </div>
+        <Header title={"Kitti - Settings"} />
         <div className="boxes">
           <h4>Add up to three tasks, a reward and an activity by clicking on a box. Then set the timer and hit start.</h4>
           <div className="dash-boxes">

@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import '../../css/task.css';
 import tasks from '../../data/tasks';
 
 export default (props) => {
   return (
     <div className="tasks">
-      <div className="task-button">
+      <div className="task-buttons">
         <Link to="/main">
-          <button className="btn btn-warning">Back to dashboard</button>
+          <button className="btn btn-warning">GO BACK</button>
         </Link>
       </div>
       <div className="task-grid">

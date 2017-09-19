@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
+import Header from './common/kittiHeader'
 import * as setKittiActions from '../actions/setKittiActions';
 import tasks from '../data/tasks';
 
@@ -44,15 +45,14 @@ class Tasks extends Component {
     return (
       <div className="Tasks">
         <div className="tasks">
-          <h3>Task {id} of 3</h3>
-          <h4>Choose up to three tasks. Remove a task by clicking on it again.</h4>
+          <Header title={"Set Task "} taskId={id} subtitle={"Choose up to three tasks. Remove a task by clicking on it again."}/>
           
           <div className="task-buttons">
             <Link to={"/tasks/" + last}>
               <button className="btn btn-default">Last task</button>
             </Link>
             <Link to="/main/">
-              <button className="btn btn-warning">Back to Dashboard</button>
+              <button className="btn btn-warning">GO BACK</button>
             </Link>
             <Link to={"/tasks/" + next}>
               <button className="btn btn-default">Next task</button>

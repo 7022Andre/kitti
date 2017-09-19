@@ -1,14 +1,3 @@
-.about-main {
-  margin: 1rem;
-  background-color: #AC4A83;
-  height: 9rem;
-  padding: 1rem;
-  color: #FCEFF6;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .about-feature {
   display: flex;
   justify-content: center;

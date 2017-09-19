@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import Header from './common/kittiHeader'
 import Task from './common/task';
 import * as setKittiActions from '../actions/setKittiActions';
 
@@ -16,10 +17,11 @@ class FunGoal extends Component {
       }
     });
   }
+
   render() {
     return (
       <div className="FunGoal">
-        <h3>Choose a reward.</h3>
+        <Header title={"Choose A Reward"} />
         <Task handleChange={this.handleChange} store={this.props.store} />
       </div>
     );

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import ReactCountdownClock from 'react-countdown-clock';
 
 import '../css/main.css';
+import Header from './common/kittiHeader'
 import mp3 from '../static/alert.mp3';
 import ShowTasks from './common/showTasks';
 import Progress from './common/progress';
@@ -58,11 +59,7 @@ class RunDashboard extends Component {
 
     return (
       <div className="Main">
-        <div className="run-dashboard">
-          <p></p>
-          <h1>Kitti - Activity Timer</h1>
-          <p></p>
-        </div>
+        <Header title={"Kitti - Activity Timer"} />
         <div className="boxes">
           <div className="progressbar">
             <Progress completed={this.state.percent} />
