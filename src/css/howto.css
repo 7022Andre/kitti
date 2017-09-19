@@ -1,0 +1,14 @@
+.howto-content {
+  margin: 0 3rem;
+}
+
+.howto-feature,
+.howto-list {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.howto-list {
+  text-align: left;
+}
