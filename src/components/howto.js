@@ -7,7 +7,7 @@ export default () => {
     <div className="HowTo">
       <Header title={"Help with Kitti"} />
       <div className="howto-main">
-        <h1>Demo</h2>
+        <h1>Demo</h1>
         
       </div>
       <Link to="/main"><button className="btn btn-lg btn-success">Get Started</button></Link>
