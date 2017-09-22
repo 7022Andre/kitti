@@ -1,6 +1,6 @@
 {
   "name": "kitti",
-  "homepage": "https://7022andre.github.io/kitti-timer-app",
+  "homepage": "https://andremuellerdev.com/kitti",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
