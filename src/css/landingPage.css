@@ -1,3 +1,7 @@
+.Landing {
+  margin: 0 1rem;
+}
+
 .Landing-main {
   margin-top: 1rem;
   background-color: #AC4A83;
@@ -9,4 +13,5 @@
 .Landing-intro {
   margin-top: 2rem;
   font-size: large;
+  padding: 3rem 1rem;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from './common/kittiHeader'
+import Header from './common/kittiHeader';
 import '../css/about.css';
 
 export default () => {
@@ -14,6 +14,7 @@ export default () => {
             <p>
               You and your child choose a task, reward and activity and set the timer. A progress bar and
               countdown will visualize the remaining fun time.
+              The basic idea is that the longer you take to complete tasks the less fun time you have.
             </p>
           </div>
           
@@ -28,10 +29,10 @@ export default () => {
           <div className="about-content">
             <h3>How does it work? What can I do with it?</h3>
             <p>
-              Check out a <a href='/howto'><button className="btn btn-large btn-success">demo</button></a> to see how it works.
+              Check out the <Link to='/help'><button className="btn btn-large btn-success">help page</button></Link> to see how it works.
             </p>
             <p>
-              Kitti is not intended to punish or force kids to do something in a too short amount of time.<br />
+              Kitti is not intended to force kids to do something in a short amount of time.<br />
               Encourage your child to help you choose a task, a reward and an activty and set her/him up for success.
               Keep in mind that kids take longer to do tasks than you as an adult.
             </p>
@@ -42,10 +43,10 @@ export default () => {
             <p>
               Kitti is my capstone project at Bloc.io - a mentorship- and project-based coding school.
               I came up with the idea while trying to explain to my daughter that the longer she takes to
-              get dressed, brush her hair and make her bed the less time she can play before we need
+              get dressed, brush her hair and make her bed the less time she has to play before we need
               to go to school.<br />
               I initially got a pen and some paper out and drew a timeline with some boxes below it and
-              was surprised how fast she can accomplish the tasks.<br />
+              was surprised how fast she can finish the tasks.<br />
 
               When I had to decide what I wanted to do for my capstone project I immediately knew that I
               wanted to turn this idea into an app. My mentor recommended to learn React.js and I could not

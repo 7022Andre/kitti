@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/kittiHeader.css';
-import Logo from '../../static/logo.gif';
+import Logo from '../../static/logo.jpg';
 
 export default (props) => {
   return (
