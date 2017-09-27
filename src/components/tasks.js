@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
-import Header from './common/kittiHeader'
+import Header from './common/kittiHeader';
 import * as setKittiActions from '../actions/setKittiActions';
 import tasks from '../data/tasks';
 
 class Tasks extends Component {
   handleChange = (display_src, caption, id) => {
-    const goalNo = "goal" + id;
+    const goalNo = 'goal' + id;
 
     if (caption === this.props.store[goalNo]['caption']) {
       this.props.actions.setTasks({
@@ -18,9 +18,9 @@ class Tasks extends Component {
           [goalNo]: {
             caption: '',
             display_src: '',
-            active: false
-          }
-        }
+            active: false,
+          },
+        },
       });
     } else {
       this.props.actions.setTasks({
@@ -29,9 +29,9 @@ class Tasks extends Component {
           [goalNo]: {
             caption,
             display_src,
-            active: true
-          }
-        }
+            active: true,
+          },
+        },
       });
     }
   }
@@ -45,30 +45,30 @@ class Tasks extends Component {
     return (
       <div className="Tasks">
         <div className="tasks">
-          <Header title={"Set Task "} taskId={id} subtitle={"Up to three tasks. Remove task by clicking on it."}/>
-          
+          <Header title={'Set Task '} taskId={id} subtitle={'Up to three tasks. Remove task by clicking on it.'} />
+
           <div className="task-buttons">
-            <Link to={"/tasks/" + last}>
+            <Link to={'/tasks/' + last}>
               <button className="btn btn-default">Last task</button>
             </Link>
             <Link to="/main/">
               <button className="btn btn-warning">GO BACK</button>
             </Link>
-            <Link to={"/tasks/" + next}>
+            <Link to={'/tasks/' + next}>
               <button className="btn btn-default">Next task</button>
             </Link>
           </div>
 
           <div className="task-grid">
-            {tasks.map((task, i) => 
-              <figure className={goal.active && goal.caption === task.caption ? "grid-figure active" : "grid-figure"} key={i}>
+            {tasks.map((task, i) =>
+              <figure className={goal.active && goal.caption === task.caption ? 'grid-figure active' : 'grid-figure'} key={i}>
                 <button className="grid-button" onClick={() => this.handleChange(process.env.PUBLIC_URL + task.display_src, task.caption, id)}>
-                  <img className="grid-image" src={process.env.PUBLIC_URL + task.display_src} alt={task.caption}/>
+                  <img className="grid-image" src={process.env.PUBLIC_URL + task.display_src} alt={task.caption} />
                 </button>
                 <figcaption>
                   <p>{task.caption}</p>
                 </figcaption>
-              </figure>
+              </figure>,
             )}
           </div>
         </div>
@@ -77,15 +77,15 @@ class Tasks extends Component {
   }
 }
 
-function mapStateToProps(store, ownProps) {
+function mapStateToProps(store) {
   return {
-    store: store['store']['tasks']
+    store: store.store.tasks,
   };
 }
 
 function mapDispatchProps(dispatch) {
   return {
-    actions: bindActionCreators(setKittiActions, dispatch)
+    actions: bindActionCreators(setKittiActions, dispatch),
   };
 }
 

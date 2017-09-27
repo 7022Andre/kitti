@@ -9,7 +9,8 @@ export default () => {
         <a
           href="https://andremuellerdev.com"
           target="_blank"
-          rel="noopener noreferrer"> My Portfolio
+          rel="noopener noreferrer"
+        > My Portfolio
         </a>
       </p>
     </div>

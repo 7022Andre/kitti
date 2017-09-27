@@ -3,17 +3,17 @@ export function setTime(time) {
 }
 
 export function setFunGoal(funGoal) {
-  return { type: 'SET_FUN_GOAL', funGoal }
+  return { type: 'SET_FUN_GOAL', funGoal };
 }
 
 export function setTasks(tasks) {
-  return { type: 'SET_TASKS', tasks }
+  return { type: 'SET_TASKS', tasks };
 }
 
 export function setTargetGoal(targetGoal) {
-  return { type: 'SET_TARGET_GOAL', targetGoal }
+  return { type: 'SET_TARGET_GOAL', targetGoal };
 }
 
 export function resetApp() {
-  return { type: 'RESET_APP' }
+  return { type: 'RESET_APP' };
 }

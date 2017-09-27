@@ -25,19 +25,19 @@ ReactDOM.render(
       <div>
         <Header />
         <Switch>
-          <Route exact path="/" component={ LandingPage } />
-          <Route path="/main" component={ Main } />
-          <Route path="/about" component={ About } />
-          <Route path="/help" component={ Help } />
-          <Route path="/fungoal" component={ FunGoal } />
-          <Route path="/targetgoal" component={ TargetGoal } />
-          <Route path="/tasks/:id" component={ Tasks } />
-          <Route path="/run" component={ RunDashboard } />
-          <Route component={ NotFound } />
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/main" component={Main} />
+          <Route path="/about" component={About} />
+          <Route path="/help" component={Help} />
+          <Route path="/fungoal" component={FunGoal} />
+          <Route path="/targetgoal" component={TargetGoal} />
+          <Route path="/tasks/:id" component={Tasks} />
+          <Route path="/run" component={RunDashboard} />
+          <Route component={NotFound} />
         </Switch>
         <Footer />
       </div>
     </BrowserRouter>
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );

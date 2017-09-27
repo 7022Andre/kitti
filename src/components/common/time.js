@@ -11,7 +11,7 @@ export default (props) => {
           min={0}
           max={5}
           value={props.store.hours}
-          onChange={(valueAsNumber) => props.handleChange(valueAsNumber, 'hours')}
+          onChange={valueAsNumber => props.handleChange(valueAsNumber, 'hours')}
         />
         <h5>Hour(s)</h5>
       </div>
@@ -22,7 +22,7 @@ export default (props) => {
           min={0}
           max={60}
           value={props.store.minutes}
-          onChange={(valueAsNumber) => props.handleChange(valueAsNumber, 'minutes')}
+          onChange={valueAsNumber => props.handleChange(valueAsNumber, 'minutes')}
         />
         <h5>Minute(s)</h5>
       </div>

@@ -10,8 +10,8 @@ class SetTimer extends Component {
     this.props.actions.setTime({
       time: {
         ...this.props.store,
-        [param]: value
-      }
+        [param]: value,
+      },
     });
   }
 
@@ -24,15 +24,15 @@ class SetTimer extends Component {
   }
 }
 
-function mapStateToProps(store, ownProps) {
+function mapStateToProps(store) {
   return {
-    store: store['store']['time']
+    store: store.store.time,
   };
 }
 
 function mapDispatchProps(dispatch) {
   return {
-    actions: bindActionCreators(setKittiActions, dispatch)
+    actions: bindActionCreators(setKittiActions, dispatch),
   };
 }
 

@@ -12,32 +12,32 @@ export default class Progress extends Component {
     animation: PropTypes.number,
     height: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.number
-    ])
+      PropTypes.number,
+    ]),
   }
 
   static defaultProps = {
     completed: 0,
     color: '#AC4A83',
     animation: 500,
-    height: 20
+    height: 20,
   }
 
   static throwError() {
     return new Error(...arguments);
   }
 
-  render () {
-    const {color, completed, animation, height, className, children, ...rest} = this.props;
+  render() {
+    const { color, completed, animation, height, className, children, ...rest } = this.props;
     const style = {
       backgroundColor: color,
       width: completed + '%',
       transition: `width ${animation}ms`,
-      height: height
+      height: height,
     };
 
     return (
-      <div className={className || "progressbar-container"} {...rest}>
+      <div className={className || 'progressbar-container'} {...rest}>
         <div className="progressbar-progress" style={style}>{children}</div>
       </div>
     );

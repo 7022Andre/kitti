@@ -6,7 +6,7 @@ import '../css/about.css';
 export default () => {
   return (
     <div className="About">
-      <Header title={"About Kitti"} />
+      <Header title={'About Kitti'} />
       <div className="about-feature">
         <div className="about-content">
           <div className="about-content">
@@ -17,7 +17,7 @@ export default () => {
               The basic idea is that the longer you take to complete tasks the less fun time you have.
             </p>
           </div>
-          
+
           <div className="about-content">
             <h3>Kitti?</h3>
             <p>
@@ -29,7 +29,7 @@ export default () => {
           <div className="about-content">
             <h3>How does it work? What can I do with it?</h3>
             <p>
-              Check out the <Link to='/help'><button className="btn btn-large btn-success">help page</button></Link> to see how it works.
+              Check out the <Link to="/help"><button className="btn btn-large btn-success">help page</button></Link> to see how it works.
             </p>
             <p>
               Kitti is not intended to force kids to do something in a short amount of time.<br />
@@ -71,4 +71,4 @@ export default () => {
       <Link to="/main"><button className="btn btn-lg btn-success">Get Started</button></Link>
     </div>
   );
-}
+};

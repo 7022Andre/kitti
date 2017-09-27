@@ -6,7 +6,7 @@ import '../css/help.css';
 export default () => {
   return (
     <div className="Help">
-      <Header title={"Help"} />
+      <Header title={'Help'} />
       <div className="help-content">
         <div>
           <h3>How does it work?</h3>
@@ -30,10 +30,10 @@ export default () => {
       <h3>Watch a demo of Kitti</h3>
       <br />
       <div className="video">
-        <iframe title="kitti-demo" src="//youtube.com/embed/uQV9P_b9dq8" frameBorder="0" allowFullScreen></iframe>
+        <iframe title="kitti-demo" src="//youtube.com/embed/uQV9P_b9dq8" frameBorder="0" allowFullScreen />
       </div>
       <br />
       <Link to="/main"><button className="btn btn-lg btn-success">Get Started</button></Link>
     </div>
   );
-}
+};
