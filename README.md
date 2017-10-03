@@ -11,7 +11,7 @@ Kitti is an app that will help your child understand time by visualizing it rath
 
 ## How does it work?
 
-Check out a [functional version of the web app](https://kitti-kids-activity-timer.herokuapp.com) to see how it works.
+Check out the [web browser app](https://kitti-kids-activity-timer.herokuapp.com) to see how it works. Heroku [puts apps to sleep](https://devcenter.heroku.com/articles/free-dyno-hours#dyno-sleeping) that don't receive traffic in a 30 minute period. It takes about 30s to one minute for the app to "wake up, so please be patient.
 
 ## Artwork
 
